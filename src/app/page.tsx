@@ -14,15 +14,13 @@ export default function Home() {
           <Invitation />
         </div>
       </div>
-      <div className="relative w-full py-16">
+      <div className="relative w-full py-16 bg-white">
         <div className="w-full max-w-[800px] mx-auto px-4 text-center">
           <Timing />
           <Meet />
-
           <RSVPForm />
           <FAQ />
         </div>
-
       </div>
 
       <footer className="py-10 text-center text-stone-400 text-sm">
