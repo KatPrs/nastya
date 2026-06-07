@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Playfair_Display, Montserrat } from "next/font/google";
 import "./globals.css";
 
-// 1. Подключаем стильные шрифты
 const serif = Playfair_Display({
   subsets: ["latin", "cyrillic"],
   variable: "--font-serif",
@@ -14,7 +13,7 @@ const sans = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Настя и Андрей | Свадьба",
+  title: "Настя и Илья | Свадьба",
   description: "Приглашение на нашу свадьбу",
 };
 
