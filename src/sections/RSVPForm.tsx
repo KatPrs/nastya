@@ -49,8 +49,8 @@ export default function RSVPForm() {
   }
 
   return (
-    <section className="mb-20 mt-20 max-w-2xl mx-auto px-6">
-      <h1 className="text-6xl italic text-[#EE5E79] mb-12 text-center" style={{ fontFamily: "'Better Land', cursive" }}>
+    <section id="rsvp" className="mb-20 mt-20 max-w-2xl mx-auto px-6 scroll-mt-20">
+      <h1 className="text-4xl md:text-6xl text-[#EE5E79] mb-12 text-center font-better-land">
         Анкета гостя
       </h1>
 
@@ -102,7 +102,7 @@ export default function RSVPForm() {
         <input name="allergies" placeholder="Пищевые аллергии / непереносимости" className="w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none" />
         <textarea name="comment" placeholder="Ваши пожелания" rows={2} className="w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none" />
 
-        <button className="w-full py-4 bg-stone-800 text-white hover:bg-[#EE5E79] transition-all duration-300 font-medium uppercase text-sm tracking-wider">
+        <button className="w-full py-4 mt-4 bg-stone-800 text-white hover:bg-[#EE5E79] transition-all duration-300 font-medium uppercase text-sm tracking-wider">
           Отправить
         </button>
         <p className="text-center text-sm text-stone-500">{status}</p>

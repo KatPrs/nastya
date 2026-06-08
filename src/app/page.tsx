@@ -4,28 +4,32 @@ import { Invitation } from '../sections/invitation';
 import { Timing } from '../sections/timing';
 import RSVPForm from '../sections/RSVPForm';
 import { FAQ } from '../sections/FAQ';
+import { Details } from '../sections/details';
+import { Map } from '../sections/map';
+import { Footer } from '../sections/footer';
 
 export default function Home() {
   return (
-    <main className="font-sans antialiased">
+    <main className="antialiased">
       <div className="relative w-full py-16 bg-[#FDFBF7] bg-[url('/fon.png')] bg-repeat">
         <div className="w-full max-w-[800px] mx-auto px-4 text-center">
           <Photo />
           <Invitation />
-        </div>
-      </div>
-      <div className="relative w-full py-16 bg-white">
-        <div className="w-full max-w-[800px] mx-auto px-4 text-center">
           <Timing />
-          <Meet />
-          <RSVPForm />
-          <FAQ />
         </div>
       </div>
 
-      <footer className="py-10 text-center text-stone-400 text-sm">
-        2026 • Nastya Wedding
-      </footer>
+      <Details/>
+
+      <div className="relative w-full bg-white">
+        <div className="w-full max-w-[800px] mx-auto px-4 text-center">
+          <RSVPForm />
+          <FAQ />
+          <Meet />
+        </div>
+      </div>
+      <Map/>
+      <Footer/>
     </main>
   );
 }

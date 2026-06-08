@@ -1,33 +1,32 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
+/* 1. Подключение шрифтов */
 @font-face {
   font-family: 'Better Land';
-  src: url('/fonts/BetterLandRUS.otf') format('truetype');
+  src: url('/fonts/BetterLandRUS.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
+}
+
+/* 2. Настройка темы (Tailwind v4) */
+@theme {
+  /* Добавляем ваши шрифты */
+  --font-better-land: "Better Land", cursive;
+  --font-palatino: "Palatino Linotype", "Palatino", serif;
+
+  /* Настройка основных цветов (ваши цвета) */
+  --color-background: #FDFBF7;
+  --color-foreground: #292524; /* stone-800 */
+  --color-accent: #EE5E79;
+}
+
+/* 3. Базовые стили */
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    /* Устанавливаем Palatino как шрифт по умолчанию */
+    font-family: var(--font-palatino); 
+  }
 }
