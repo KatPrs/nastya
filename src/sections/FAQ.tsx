@@ -14,7 +14,6 @@ const questions = [
 ];
 
 export const FAQ = () => {
-  // Храним индекс открытого вопроса (-1 значит, что все закрыты)
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggle = (index: number) => {
@@ -22,25 +21,33 @@ export const FAQ = () => {
   };
 
   return (
-    <section className="mb-20 mt-20 max-w-2xl mx-auto px-6">
-      <h1 className="text-4xl md:text-6xl italic text-[#EE5E79] mb-12 text-center font-better-land">
+    <section className="mb-16 mt-16 max-w-2xl mx-auto px-6">
+      <h1 className="text-5xl md:text-6xl italic text-[#EE5E79] mb-10 text-center font-better-land">
         Вопросы и ответы
       </h1>
       
-      <div className="space-y-4">
+      <div className="space-y-2">
         {questions.map((item, i) => (
-          <div key={i} className="border-b border-stone-200 pb-4">
+          <div key={i} className="border-b border-stone-200 py-2">
             <button 
               onClick={() => toggle(i)}
-              className="flex justify-between w-full text-left font-bold text-lg hover:text-[#EE5E79] transition-colors"
+              className="flex justify-between items-center w-full text-left font-bold text-lg py-3 hover:text-[#EE5E79] transition-colors"
             >
-              {item.q}
-              <span>{openIndex === i ? '−' : '+'}</span>
+              <span className="leading-snug pr-4">{item.q}</span>
+              <span className="text-2xl text-[#EE5E79]">{openIndex === i ? '−' : '+'}</span>
             </button>
             
-            {/* Анимация плавного появления */}
-            <div className={`overflow-hidden text-left transition-all duration-300 ${openIndex === i ? 'max-h-40 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
-              <p className="text-stone-600 font-light">{item.a}</p>
+            {/* Анимация без жесткого ограничения высоты */}
+            <div 
+              className={`grid transition-all duration-300 ease-in-out ${
+                openIndex === i ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+              }`}
+            >
+              <div className="overflow-hidden">
+                <p className="text-stone-600 font-light text-base md:text-lg pb-4 leading-relaxed">
+                  {item.a}
+                </p>
+              </div>
             </div>
           </div>
         ))}

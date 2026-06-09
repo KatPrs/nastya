@@ -11,7 +11,7 @@ import { Footer } from '../sections/footer';
 export default function Home() {
   return (
     <main className="antialiased">
-      <div className="relative w-full py-16 bg-[#FDFBF7] bg-[url('/fon.png')] bg-repeat">
+      <div className="relative w-full py-8 md:py-16 bg-[#FDFBF7] bg-[url('/fon.png')] bg-repeat">
         <div className="w-full max-w-[800px] mx-auto px-4 text-center">
           <Photo />
           <Invitation />
@@ -19,17 +19,17 @@ export default function Home() {
         </div>
       </div>
 
-      <Details/>
+      <Details />
 
       <div className="relative w-full bg-white">
-        <div className="w-full max-w-[800px] mx-auto px-4 text-center">
+        <div className="w-full max-w-[800px] mx-auto px-4 text-center"> {/* Добавил py-10 */}
           <RSVPForm />
           <FAQ />
           <Meet />
         </div>
       </div>
-      <Map/>
-      <Footer/>
+      <Map />
+      <Footer />
     </main>
   );
 }
