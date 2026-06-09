@@ -4,7 +4,7 @@ export const Details = () => (
       Детали
     </h1>
     
-    <div className="text-[11px] md:text-lg max-w-lg mx-10 uppercase tracking-wide leading-relaxed">
+    <div className="text-xs sm:text-sm md:text-lg max-w-lg mx-auto uppercase tracking-wide leading-relaxed text-center">
       <p className="mb-6">
         Мы будем раыды, если ты откажешься от покупки живых цветов 
         и заменишь их на подарочный сертификат 

@@ -21,7 +21,7 @@ export const FAQ = () => {
   };
 
   return (
-    <section className="mb-16 mt-16 max-w-2xl mx-auto px-6">
+    <section className="my-12 md:my-20 max-w-2xl mx-auto px-6">
       <h1 className="text-5xl md:text-6xl italic text-[#EE5E79] mb-10 text-center font-better-land">
         Вопросы и ответы
       </h1>

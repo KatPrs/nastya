@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 export const Meet = () => (
-  <section className="my-10 md:my-20 px-4">
+  <section className="my-12 md:my-20 px-4">
     <div className="mb-8 md:mb-16">
       <h1 className="text-5xl md:text-6xl italic text-[#EE5E79] font-better-land">
         До встречи!

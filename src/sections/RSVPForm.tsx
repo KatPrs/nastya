@@ -49,8 +49,8 @@ export default function RSVPForm() {
   }
 
   return (
-    <section id="rsvp" className="mb-16 mt-16 max-w-2xl mx-auto px-6 scroll-mt-20">
-      <h1 className="text-5xl md:text-6xl text-[#EE5E79] mb-12 text-center font-better-land">
+    <section id="rsvp" className="my-12 md:my-20 max-w-2xl mx-auto px-6 scroll-mt-20">
+      <h1 className="text-5xl md:text-6xl text-[#EE5E79] mb-10 text-center font-better-land">
         Анкета гостя
       </h1>
 

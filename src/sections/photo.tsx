@@ -6,7 +6,7 @@ export const Photo = () => {
       {/* RSVP Плашка */}
       <a
         href="#rsvp"
-        className="absolute top-0 md:top-10 right-5 md:right-10 bg-[#FFB5CD] text-white px-4 py-4 rounded-full shadow-md text-[10px] md:text-sm font-semibold hover:bg-[#95c5d3] transition-colors"
+        className="absolute -top-5 right-5 md:right-10 bg-[#FFB5CD] text-white px-4 py-4 rounded-full shadow-md text-[10px] md:text-sm font-semibold hover:bg-[#95c5d3] transition-colors"
       >
         ЗАПОЛНИТЬ АНКЕТУ
       </a>
@@ -28,7 +28,7 @@ export const Photo = () => {
 
         <div className="relative w-full max-w-[500px] h-[300px] md:h-[497px] mx-auto">
           <Image
-            src="/kids.svg"
+            src="/kids_.png"
             alt="Наши детские фото"
             fill
             className="object-contain"
@@ -45,9 +45,17 @@ export const Photo = () => {
         </div>
       </div>
 
-      <div className="w-full bg-[#e94b75] text-white py-4 md:py-6 text-5xl md:text-6xl my-8 md:mb-16 font-better-land text-center">
-        Мы женимся!
-      </div>
+<div className="
+  -mx-4 md:mx-auto           /* Отрицательный отступ на мобильных, авто-центрирование на десктопах */
+  w-screen md:w-full         /* На всю ширину на мобильных, обычная ширина на десктопах */
+  max-w-2xl                  /* Ограничение ширины для десктопа (повторяет max-w-2xl остального контента) */
+  bg-[#e94b75] text-white 
+  py-4 md:py-6 
+  text-5xl md:text-6xl 
+  font-better-land text-center
+">
+  Мы женимся!
+</div>
     </section>
   );
 };

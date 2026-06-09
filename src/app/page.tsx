@@ -22,7 +22,7 @@ export default function Home() {
       <Details />
 
       <div className="relative w-full bg-white">
-        <div className="w-full max-w-[800px] mx-auto px-4 text-center"> {/* Добавил py-10 */}
+        <div className="w-full max-w-[800px] mx-auto px-4 text-center">
           <RSVPForm />
           <FAQ />
           <Meet />
