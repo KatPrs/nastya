@@ -72,8 +72,8 @@ export default function RSVPForm() {
                 type="button"
                 onClick={() => toggleDrink(drink)}
                 className={`px-2 py-1.5 text-xs border transition-all ${selectedDrinks.includes(drink)
-                    ? "bg-[#EE5E79] text-white border-[#EE5E79]"
-                    : "bg-transparent text-stone-600 border-stone-300 hover:border-stone-500"
+                  ? "bg-[#EE5E79] text-white border-[#EE5E79]"
+                  : "bg-transparent text-stone-600 border-stone-300 hover:border-stone-500"
                   }`}
               >
                 {drink}
@@ -100,8 +100,17 @@ export default function RSVPForm() {
 
         <input name="guestsCount" type="number" placeholder="Количество гостей" className="w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none" />
         <input name="allergies" placeholder="Пищевые аллергии / непереносимости" className="w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none" />
-        <textarea name="comment" placeholder="Ваши пожелания" rows={2} className="w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none" />
-
+        <textarea
+          name="comment"
+          placeholder="Ваши пожелания"
+          rows={1} // Начинаем с 1 строки
+          onInput={(e) => {
+            const target = e.target as HTMLTextAreaElement;
+            target.style.height = 'auto'; // Сбрасываем высоту
+            target.style.height = target.scrollHeight + 'px'; // Устанавливаем по контенту
+          }}
+          className="w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none resize-none overflow-hidden font-palatino"
+        />
         <button className="w-full py-4 mt-4 bg-stone-800 text-white hover:bg-[#EE5E79] transition-all duration-300 font-medium uppercase text-sm tracking-wider">
           Отправить
         </button>

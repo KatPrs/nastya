@@ -11,7 +11,7 @@ export const Meet = () => (
     {/* Адаптивная высота фото: 350px на мобильных, 500px на десктопе */}
     <div className="relative w-full max-w-[500px] mx-auto h-[350px] md:h-[500px]">
       <Image
-        src="/we.svg"
+        src="/photo.jpg"
         alt="Наше фото"
         fill
         className="object-contain"

@@ -6,7 +6,7 @@ export const Photo = () => {
       {/* RSVP Плашка */}
       <a
         href="#rsvp"
-        className="absolute -top-5 right-5 md:right-10 bg-[#FFB5CD] text-white px-4 py-4 rounded-full shadow-md text-[10px] md:text-sm font-semibold hover:bg-[#95c5d3] transition-colors"
+        className="absolute -top-5 right-5 md:right-10 bg-[#FFB5CD] text-white px-4 py-4 rounded-full shadow-md text-[10px] md:text-sm font-semibold hover:bg-[#e94b75] transition-colors"
       >
         ЗАПОЛНИТЬ АНКЕТУ
       </a>
