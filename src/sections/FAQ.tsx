@@ -44,7 +44,7 @@ export const FAQ = () => {
               }`}
             >
               <div className="overflow-hidden">
-                <p className="text-stone-600 font-light text-base md:text-lg pb-4 leading-relaxed">
+                <p className="text-stone-600 font-light text-base md:text-lg pb-4 leading-relaxed text-left">
                   {item.a}
                 </p>
               </div>
