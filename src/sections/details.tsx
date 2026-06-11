@@ -1,6 +1,6 @@
 export const Details = () => (
   <section className="bg-[#e94b75] text-white py-12 md:py-20 px-6 md:px-10 text-center">
-    <h1 className="text-5xl md:text-6xl font-better-land mb-6">
+    <h1 className="text-4xl sm:text-5xl md:text-6xl font-better-land mb-6">
       Детали
     </h1>
     

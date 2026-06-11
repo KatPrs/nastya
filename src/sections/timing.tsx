@@ -7,7 +7,7 @@ export const Timing = () => {
                 {/* Адаптивный контейнер */}
                 <div className="relative w-full max-w-[440px] aspect-[110/165]">
                     <Image
-                        src="/timing.svg"
+                        src="/timeline.png"
                         alt="Расписание дня"
                         fill
                         className="object-contain"

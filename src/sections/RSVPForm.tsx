@@ -50,12 +50,29 @@ export default function RSVPForm() {
 
   return (
     <section id="rsvp" className="my-12 md:my-20 max-w-2xl mx-auto px-6 scroll-mt-20">
-      <h1 className="text-5xl md:text-6xl text-[#EE5E79] mb-10 text-center font-better-land">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl text-[#EE5E79] mb-10 text-center font-better-land">
         Анкета гостя
       </h1>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        <input name="name" placeholder="Имя и фамилия" required className="w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none" />
+        {/* Вариант для мобильных (отображается только на малых экранах) */}
+        <input
+          id="name-mobile"
+          name="name"
+          placeholder="Имя и фамилия гостей"
+          required
+          className="md:hidden w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none transition-colors"
+        />
+
+        {/* Вариант для десктопа (скрыт на мобильных, появляется от md и выше) */}
+        <input
+          id="name-desktop"
+          name="name"
+          placeholder="Имя фамилия ваша и вашего спутника, если приглашены вдвоём"
+          required
+          className="hidden md:block w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none transition-colors"
+        />
+
         <input name="phone" type="tel" placeholder="Номер телефона" required className="w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none" />
 
         <select name="attendance" className="w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none text-stone-600">
@@ -98,7 +115,6 @@ export default function RSVPForm() {
           )}
         </div>
 
-        <input name="guestsCount" type="number" placeholder="Количество гостей" className="w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none" />
         <input name="allergies" placeholder="Пищевые аллергии / непереносимости" className="w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none" />
         <textarea
           name="comment"

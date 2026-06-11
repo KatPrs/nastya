@@ -4,11 +4,11 @@ export const Invitation = () => (
   <section className="flex flex-col items-center text-center px-4 py-8">
     {/* Текст приглашения */}
     <div className="mb-12 text-xs sm:text-sm md:text-lg max-w-lg mx-auto uppercase tracking-wide leading-relaxed">
-  <p className="mb-3">Дорогие гости!</p>
-  <p>С огромным удовольствием приглашаем вас </p> 
-    <p>разделить этот важный для нас день —</p>
-  <p>день нашей свадьбы!</p>
-</div>
+      <p className="mb-3">Дорогие гости!</p>
+      <p>С огромным удовольствием приглашаем вас </p>
+      <p>разделить этот важный для нас день —</p>
+      <p>день нашей свадьбы!</p>
+    </div>
 
     {/* Место */}
     <div className="relative px-4">
@@ -17,7 +17,7 @@ export const Invitation = () => (
       
       {/* Иконка "ГДЕ?" */}
       {/* Добавил scale-75 для мобильных, чтобы иконка не была слишком огромной */}
-      <div className="absolute -top-10 -right-15 sm:-right-24 md:-right-40 w-20 md:w-32 scale-75 md:scale-100">
+      <div className="absolute -top-10 -right-12 min-[420px]:-right-15 sm:-right-24 md:-right-40 w-20 md:w-32 scale-75 md:scale-100">
         <Image src="/where.svg" alt="Где?" width={110} height={100} className="object-contain" />
       </div>
     </div>
@@ -30,8 +30,8 @@ export const Invitation = () => (
 
       {/* Иконка "КОГДА?" */}
       {/* top-16 для мобильных, top-24 для десктопа */}
-      <div className="absolute top-16 -left-25 sm:-left-24 md:-left-36 w-28 md:w-32 scale-75 md:scale-100">
-        <Image src="/when.svg" alt="Когда?" width={148} height={92} className="object-contain" />
+      <div className="absolute top-16 -left-18 min-[420px]:-left-26 sm:-left-28 md:-left-36 w-28 md:w-32 scale-60 min-[420px]:scale-75 md:scale-100">
+        <Image src="/kogda.svg" alt="Когда?" width={148} height={92} className="object-contain" />
       </div>
     </div>
   </section>

@@ -2,7 +2,6 @@ export const Footer = () => (
     <footer className="py-10 mt-12 md:mt-20 bg-[#5B4242]">
         <div className="w-full max-w-[600px] mx-auto px-6 text-center text-white space-y-8">
 
-            {/* Текст: на мобильных text-base (16px), на планшетах и выше text-xl (20px) */}
             <p className="text-xs sm:text-sm md:text-lg leading-relaxed opacity-90 italic">
                 По всем вопросам, связанным с трансфером, размещением гостей, торжественным вечером и сюрпризами, обращайтесь к нашему организатору
             </p>
@@ -23,7 +22,7 @@ export const Footer = () => (
                         href="tel:+375291900920"
                         className="text-base md:text-xl hover:text-[#a8d5e2] transition-colors whitespace-nowrap font-bold"
                     >
-                        +375 29 190 0920
+                        +375 29 190 09 20
                     </a>
                 </div>
 
