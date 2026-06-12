@@ -54,13 +54,13 @@ export default function RSVPForm() {
       </h1>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        <input
-          name="name"
-          required
-          className="w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none transition-colors"
-          // Используем JS для текста, чтобы не дублировать поля
-          placeholder="Имя, фамилия ( и спутника)"
-        />
+<textarea
+  name="name"
+  required
+  rows={1}
+  className="overflow-hidden w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none transition-colors resize-none h-[52px] sm:h-10 placeholder:white-space-pre-line sm:placeholder:whitespace-nowrap"
+  placeholder="Имя, фамилия &#10;(и спутника, если вы приглашены вместе)"
+/>
 
         <input name="phone" type="tel" placeholder="Номер телефона" required className="w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none" />
 
