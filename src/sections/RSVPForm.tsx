@@ -54,13 +54,13 @@ export default function RSVPForm() {
       </h1>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-<textarea
-  name="name"
-  required
-  rows={1}
-  className="overflow-hidden w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none transition-colors resize-none h-[52px] sm:h-10 placeholder:white-space-pre-line sm:placeholder:whitespace-nowrap"
-  placeholder="Имя, фамилия &#10;(и спутника, если вы приглашены вместе)"
-/>
+        <textarea
+          name="name"
+          required
+          rows={1}
+          className="w-full bg-transparent border-b border-stone-300 py-2 outline-none transition-colors resize-none overflow-hidden focus:border-[#EE5E79] placeholder:whitespace-pre-line sm:placeholder:whitespace-nowrap [field-sizing:content] min-h-[40px]"
+          placeholder="Имя, фамилия &#10;(и спутника, если Вы приглашены вместе)"
+        />
 
         <input name="phone" type="tel" placeholder="Номер телефона" required className="w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none" />
 
@@ -104,7 +104,12 @@ export default function RSVPForm() {
           )}
         </div>
 
-        <input name="allergies" placeholder="Пищевые аллергии / непереносимости" className="w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none" />
+        <textarea
+          name="allergies"
+          rows={1}
+          className="w-full bg-transparent border-b border-stone-300 py-2 outline-none transition-colors resize-none overflow-hidden focus:border-[#EE5E79] placeholder:whitespace-pre-line sm:placeholder:whitespace-nowrap [field-sizing:content] min-h-[40px]"
+          placeholder="Пищевые аллергии /&#10;непереносимости"
+        />
         <textarea
           name="comment"
           placeholder="Ваши пожелания"

@@ -6,7 +6,7 @@ export const Details = () => (
     
     <div className="text-xs sm:text-sm md:text-lg max-w-lg mx-auto uppercase tracking-wide leading-relaxed text-center">
       <p className="mb-6">
-        Мы будем рады, если вы откажетесь от покупки живых цветов 
+        Мы будем рады, если Вы откажетесь от покупки живых цветов 
         и замените их на подарочный сертификат 
         для обустройства нашего уютного дома или на 
         сертификат в Золотое Яблоко – 

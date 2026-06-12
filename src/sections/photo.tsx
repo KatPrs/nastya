@@ -13,9 +13,9 @@ export const Photo = () => {
 
       {/* Контейнер для изображения */}
       <div className="w-full max-w-3xl mx-auto pt-6">
-        <div className="relative w-full aspect-[1565/1549]">
+        <div className="relative w-full aspect-[1092/1134]">
           <Image
-            src="/vse_4.png"
+            src="/vse_5.png"
             alt="Приглашение"
             fill
             className="object-contain"
