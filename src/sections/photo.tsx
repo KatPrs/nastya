@@ -25,8 +25,9 @@ export const Photo = () => {
         {/* Контейнер, который держит всё вместе */}
         <div className="relative w-full max-w-[600px] flex items-center justify-center">
 
-          {/* 1. Фон-сердце как отдельный слой (позиционируется абсолютно) */}
-          <div className="absolute inset-0 -z-10000 w-full h-full">
+          {/* 1. Фон-сердце */}
+          {/* z-0 — это база. Чтобы спрятать за контент, можно добавить -z-10 */}
+          <div className="absolute inset-0 -z-10 w-full h-full">
             <img
               src="/serdce.png"
               alt="Фон сердце"
@@ -35,7 +36,7 @@ export const Photo = () => {
           </div>
 
           {/* 2. Контент (заголовок и фото детей) - они теперь зафиксированы относительно фона */}
-          <div className="flex flex-col items-center w-full">
+          <div className="relative z-10 flex flex-col items-center w-full">
             <h1 className="text-5xl sm:text-6xl md:text-7xl text-[#e94b75] mb-4 font-better-land px-4">
               Илья и Настя
             </h1>
@@ -48,12 +49,12 @@ export const Photo = () => {
                 className="object-contain"
               />
             </div>
-          </div>
+        </div>
         </div>
       </div>
 
       <div className="max-w-2xl mx-auto w-full">
-  
+
   {/* 2. Контейнер, который растягивается на всю ширину на мобильном, 
          а внутри "максимальной ширины" — на десктопе */}
   <div className="

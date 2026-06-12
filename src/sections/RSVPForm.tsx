@@ -27,14 +27,13 @@ export default function RSVPForm() {
       name: e.target.name.value,
       phone: e.target.phone.value,
       attendance: e.target.attendance.value,
-      guestsCount: e.target.guestsCount.value,
       drinks: [...selectedDrinks, showOtherInput ? otherDrink : ''].filter(Boolean).join(', '),
       allergies: e.target.allergies.value,
       comment: e.target.comment.value,
     };
 
     try {
-      await fetch('https://script.google.com/macros/s/AKfycbzhTh-pfOwI6EXQXCEsLshrJtPJoX37SWVblGXYHeNqHExtc_aBJmiMJD7hAhM_pSHn/exec', {
+      await fetch('https://script.google.com/macros/s/AKfycbzokmILNcYO6TJny4ZagllrucEkrhaBQJXzyqkwcSLDpLoopSELNWtusaJpvg_zBa-e/exec', {
         method: 'POST',
         body: JSON.stringify(formData),
       });
@@ -55,22 +54,15 @@ export default function RSVPForm() {
       </h1>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Вариант для мобильных (отображается только на малых экранах) */}
         <input
-          id="name-mobile"
           name="name"
-          placeholder="Имя и фамилия гостей"
           required
-          className="md:hidden w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none transition-colors"
-        />
-
-        {/* Вариант для десктопа (скрыт на мобильных, появляется от md и выше) */}
-        <input
-          id="name-desktop"
-          name="name"
-          placeholder="Имя фамилия ваша и вашего спутника, если приглашены вдвоём"
-          required
-          className="hidden md:block w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none transition-colors"
+          className="w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none transition-colors"
+          // Используем JS для текста, чтобы не дублировать поля
+          placeholder={typeof window !== 'undefined' && window.innerWidth < 768
+            ? "Имя и фамилия гостей"
+            : "Имя и фамилия ваша и вашего спутника, если приглашены вдвоём"
+          }
         />
 
         <input name="phone" type="tel" placeholder="Номер телефона" required className="w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none" />
