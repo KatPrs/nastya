@@ -33,7 +33,7 @@ export default function RSVPForm() {
     };
 
     try {
-      await fetch('https://script.google.com/macros/s/AKfycbzokmILNcYO6TJny4ZagllrucEkrhaBQJXzyqkwcSLDpLoopSELNWtusaJpvg_zBa-e/exec', {
+      await fetch('https://script.google.com/macros/s/AKfycbwevSTpiPAi-Km0eUk9lywaohIoTWqviagr0Mx07rfClAQyd1VtVtjZnqQXgXJlPEqK/exec', {
         method: 'POST',
         body: JSON.stringify(formData),
       });
@@ -48,7 +48,7 @@ export default function RSVPForm() {
   }
 
   return (
-    <section id="rsvp" className="pt-12 md:pt-20 mb-12 md:mb-20 max-w-2xl mx-auto px-6 scroll-mt-20">
+    <section id="rsvp" className="pt-12 md:pt-20 mb-12 md:mb-20 max-w-2xl mx-auto px-6 scroll-mt-0">
       <h1 className="text-4xl sm:text-5xl md:text-6xl text-[#EE5E79] mb-10 text-center font-better-land">
         Анкета гостя
       </h1>
