@@ -26,7 +26,7 @@ export const Photo = () => {
         <div className="relative w-full max-w-[600px] flex items-center justify-center">
 
           {/* 1. Фон-сердце как отдельный слой (позиционируется абсолютно) */}
-          <div className="absolute inset-0 -z-1000 w-full h-full">
+          <div className="absolute inset-0 -z-10000 w-full h-full">
             <img
               src="/serdce.png"
               alt="Фон сердце"
