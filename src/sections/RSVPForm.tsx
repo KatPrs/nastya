@@ -48,7 +48,7 @@ export default function RSVPForm() {
   }
 
   return (
-    <section id="rsvp" className="my-12 md:my-20 max-w-2xl mx-auto px-6 scroll-mt-20">
+    <section id="rsvp" className="pt-12 md:pt-20 mb-12 md:mb-20 max-w-2xl mx-auto px-6 scroll-mt-20">
       <h1 className="text-4xl sm:text-5xl md:text-6xl text-[#EE5E79] mb-10 text-center font-better-land">
         Анкета гостя
       </h1>
@@ -59,10 +59,7 @@ export default function RSVPForm() {
           required
           className="w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none transition-colors"
           // Используем JS для текста, чтобы не дублировать поля
-          placeholder={typeof window !== 'undefined' && window.innerWidth < 768
-            ? "Имя и фамилия гостей"
-            : "Имя и фамилия ваша и вашего спутника, если приглашены вдвоём"
-          }
+          placeholder="Имя, фамилия ( и спутника)"
         />
 
         <input name="phone" type="tel" placeholder="Номер телефона" required className="w-full border-b border-stone-300 bg-transparent py-2 focus:border-[#EE5E79] outline-none" />
